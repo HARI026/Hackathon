@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Weather Forecast</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="history.html">History</a>
+    </nav>
+  </header>
+
+  <main class="contact-section">
+  <section class="contact-card">
+    <h2>We'd Love to Hear From You</h2>
+    <p>If you have any questions, suggestions, or just want to say hello, feel free to contact us using the form below.</p>
+
+    <form id="contact-form" class="contact-form">
+      <input type="text" name="from_name" placeholder="Your Name" required />
+      <input type="email" name="from_email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="message-status" style="margin-top: 1rem;"></div>
+
+    <div class="contact-info">
+      <h3>Contact Details</h3>
+      <p><strong>Email:</strong> krishnahari90255@gmail.com</p>
+      <p><strong>Phone:</strong> +91 9025576183</p>
+      <p><strong>Address:</strong> Kallakurichi,Tamilnadu</p>
+    </div>
+  </section>
+</main>
+
+  <footer>
+    <p>&copy; 2025 Weather Forecast. All rights reserved.</p>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>
