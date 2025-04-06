@@ -1,22 +1,21 @@
-// Replace with your actual EmailJS credentials
-const SERVICE_ID = "service_3ir6p6g";
-const TEMPLATE_ID = "template_xd73cjw";
-const PUBLIC_KEY = "9pqB7hySi5e0x4L9Y";
+// Initialize EmailJS
+(function () {
+  emailjs.init("9pqB7hySi5e0x4L9Y"); // 🔁 Replace with your EmailJS Public Key
+})();
 
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("message-status");
+// Form submission handler
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  const statusDiv = document.getElementById("message-status");
+  statusDiv.innerHTML = "Sending...";
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
-      .then(() => {
-        status.innerHTML = "<p style='color: #00cc66;'>✅ Message sent successfully!</p>";
-        form.reset();
-      }, (err) => {
-        status.innerHTML = "<p style='color: red;'>❌ Failed to send message. Please try again.</p>";
-        console.error("Send error:", err);
-      });
-  });
+  emailjs.sendForm("service_3ir6p6g", "template_xd73cjw", this)
+    .then(function () {
+      statusDiv.innerHTML = `<span style="color:green;">Message sent successfully! ✅</span>`;
+      document.getElementById("contact-form").reset();
+    }, function (error) {
+      statusDiv.innerHTML = `<span style="color:red;">Oops! Something went wrong. ❌</span>`;
+      console.error("FAILED...", error);
+    });
 });
