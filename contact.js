@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     emailjs.sendForm("service_3ir6p6g", "template_xd73cjw", this)
       .then(() => {
-        statusDiv.innerHTML = `<span style="color:#fff;">Message sent successfully! ✅</span>`;
+        statusDiv.innerHTML = `<span style="color:green;">Message sent successfully! ✅</span>`;
         alert(`Thanks, ${name}! We received your message from ${email}.`);
         form.reset();
       })
