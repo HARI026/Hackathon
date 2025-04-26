@@ -29,6 +29,11 @@
       <div class="weather card">
         <h2><i class="fas fa-cloud-bolt"></i> Check the Weather</h2>
         <input type="text" id="city" placeholder="Enter city name" />
+
+       
+          <button id="gpsBtn">Use My Location</button> <!-- New Button -->
+      
+
         <button onclick="getWeather()"><i class="fas fa-magnifying-glass-location"></i> Get Weather</button>
         <div id="weatherResult" class="result"></div>
         <h3><i class="fas fa-calendar-day"></i> 2-Day Forecast</h3>
@@ -36,16 +41,7 @@
       </div>
     </div>
 
-    <div id="about" class="page" style="display:none">
-      <h2><i class="fas fa-info"></i> About</h2>
-      <p>This website provides real-time weather updates, a clean UI, and a 2-day forecast using the OpenWeather API.</p>
-    </div>
-
-    <div id="contact" class="page" style="display:none">
-      <h2><i class="fas fa-headset"></i> Contact</h2>
-      <p><i class="fas fa-envelope"></i> Email: support@weatherforecast.com</p>
-      <p><i class="fas fa-phone"></i> Phone: +1234567890</p>
-    </div>
+  
 
     <div id="history" class="page" style="display:none">
       <h2><i class="fas fa-history"></i> Search History</h2>
